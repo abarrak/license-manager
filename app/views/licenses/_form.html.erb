@@ -1,0 +1,42 @@
+<%= form_with(model: license) do |form| %>
+  <% if license.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(license.errors.count, "error") %> prohibited this license from being saved:</h2>
+
+      <ul>
+        <% license.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :current_expire_date, style: "display: block" %>
+    <%= form.date_field :current_expire_date %>
+  </div>
+
+  <div>
+    <%= form.label :renewal_times, style: "display: block" %>
+    <%= form.number_field :renewal_times %>
+  </div>
+
+  <div>
+    <%= form.label :owner, style: "display: block" %>
+    <%= form.text_field :owner %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
