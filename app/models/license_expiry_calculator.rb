@@ -1,0 +1,2 @@
+class LicenseExpiryCalculator < ApplicationRecord
+end
