@@ -2,13 +2,14 @@
 
 <h1>Licenses</h1>
 
+<%= button_to "New license", new_license_path, method: :get, form_class: "license_actions" %>
+
 <div id="licenses">
   <% @licenses.each do |license| %>
     <%= render license %>
-    <p>
+    <p class="license_actions">
       <%= link_to "Show this license", license %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New license", new_license_path %>

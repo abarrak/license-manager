@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.license_box {
+  border: 1px dotted gray;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.license_actions {
+  text-align: right;
+}
