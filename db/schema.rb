@@ -50,11 +50,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_194642) do
   end
 
   create_table "license_expiries", force: :cascade do |t|
-    t.integer "license_id_id", null: false
+    t.integer "license_id"
     t.integer "days_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["license_id_id"], name: "index_license_expiries_on_license_id_id"
+    t.index ["license_id"], name: "index_license_expiries_on_license_id"
   end
 
   create_table "licenses", force: :cascade do |t|
@@ -69,5 +69,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_194642) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "license_expiries", "license_ids"
+  add_foreign_key "license_expiries", "licenses"
 end

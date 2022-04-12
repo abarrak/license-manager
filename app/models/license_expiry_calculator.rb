@@ -1,2 +1,0 @@
-class LicenseExpiryCalculator < ApplicationRecord
-end
