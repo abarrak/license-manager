@@ -1,15 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
+  title: MSSQL Enterprise
   current_expire_date: 2022-04-10
-  renewal_times: 1
-  owner: MyString
-  description: MyText
-
-two:
-  title: MyString
-  current_expire_date: 2022-04-10
-  renewal_times: 1
-  owner: MyString
-  description: MyText
+  renewal_times: 0
+  owner: PD
+  owner_email: pd@example.com
+  description: A subscription for enterprise MS SQL database.

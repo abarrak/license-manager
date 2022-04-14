@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  licenses_mailer:
+    expired:
+      subject: license %{title} has expired

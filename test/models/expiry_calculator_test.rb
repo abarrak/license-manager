@@ -5,13 +5,15 @@ class ExpiryCalculatorTest < ActiveSupport::TestCase
     @calcuator = ExpiryCalculator.new
     @test_data = {
       one_day: DateTime.now + 1,
+      two_day: DateTime.now + 2,
       three_months: Date.today + 90,
       one_year: Date.parse((Date.today + 365).to_s)
     }
   end
 
   test "calculate difference in days for current and future expiry date" do
-    assert_equal 1, @calcuator.calculate(@test_data[:one_day])
+    assert_equal 0, @calcuator.calculate(@test_data[:one_day])
+    assert_equal 1, @calcuator.calculate(@test_data[:two_day])
     assert_equal 90, @calcuator.calculate(@test_data[:three_months])
     assert_equal 365, @calcuator.calculate(@test_data[:one_year])
   end

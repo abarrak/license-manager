@@ -5,6 +5,8 @@ class CreateLicenses < ActiveRecord::Migration[7.0]
       t.date :current_expire_date
       t.integer :renewal_times
       t.string :owner
+      t.string :owner_email
+      t.integer :owner_mobile
       t.text :description
 
       t.timestamps

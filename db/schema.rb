@@ -62,6 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_11_194642) do
     t.date "current_expire_date"
     t.integer "renewal_times"
     t.string "owner"
+    t.string "owner_email"
+    t.integer "owner_mobile"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
