@@ -14,7 +14,8 @@
 #  updated_at          :datetime         not null
 #
 class License < ApplicationRecord
-  has_one :license_expiry
+  has_one :license_expiry, dependent: :destroy
   has_rich_text :description
+
   validates_presence_of :title
 end

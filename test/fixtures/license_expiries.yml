@@ -1,7 +1,3 @@
 one:
   license_id: one
   days_count: 1
-
-two:
-  license_id: two
-  days_count: 1
