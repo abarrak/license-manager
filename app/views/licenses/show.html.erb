@@ -6,5 +6,5 @@
   <%= link_to "Edit this license", edit_license_path(@license) %> |
   <%= link_to "Back to licenses", licenses_path %>
 
-  <%= button_to "Destroy this license", @license, method: :delete %>
+  <%= button_to "Destroy this license", @license, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
 </div>

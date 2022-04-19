@@ -3,6 +3,7 @@
 <h1>Licenses</h1>
 
 <%= button_to "New license", new_license_path, method: :get, form_class: "license_actions" %>
+<br>
 
 <div id="licenses">
   <% @licenses.each do |license| %>
@@ -10,6 +11,9 @@
     <p class="license_actions">
       <%= link_to "Show this license", license %>
     </p>
+  <% end %>
+  <% unless @licenses.any? %>
+    <p class="license_box">There are no licenses yet.</p>
   <% end %>
 </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LicenseManager</title>
+    <title><%= page_title yield :title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,18 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+
+    <% if flash.any? %>
+      <blockquote>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+        <% end %>
+      </blockquote>
+    <% end %>
+
     <%= yield %>
+
+    <%= render 'layouts/footer' %>
   </body>
 </html>

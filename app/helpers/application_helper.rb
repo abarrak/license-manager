@@ -1,4 +1,10 @@
 module ApplicationHelper
+  BASE_TITLE = "License Manager"
+
+  def page_title title = ''
+    title.empty? ? BASE_TITLE : "#{title} • #{BASE_TITLE}"
+  end
+
   def greeting_phrase
     now      = Time.zone.now
     today    = Date.current.to_time
