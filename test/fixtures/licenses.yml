@@ -1,6 +1,6 @@
 one:
   title: MSSQL Enterprise
-  current_expire_date: 2022-04-10
+  current_expire_date: 2040-04-10
   renewal_times: 0
   owner: PD
   owner_email: pd@example.com

@@ -2,6 +2,6 @@ class RunExpiryChecksJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    # Do something later
+    LicenseExpiry.calculate_all_expiries!
   end
 end
