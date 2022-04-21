@@ -18,4 +18,11 @@ class License < ApplicationRecord
   has_rich_text :description
 
   validates_presence_of :title
+
+  class << self
+    def scrape_licenses_from_external_source
+      @scraping     ||= Rails.configuration.x.scraping.enabled
+      @scraping_url ||= Rails.configuration.x.scraping.assets_page_url
+    end
+  end
 end

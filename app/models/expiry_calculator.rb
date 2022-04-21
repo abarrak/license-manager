@@ -1,7 +1,4 @@
 class ExpiryCalculator
-  def initialize
-  end
-
   def calculate record
     expiry_date = case record
       when Date

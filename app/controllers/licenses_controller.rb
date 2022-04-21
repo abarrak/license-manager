@@ -62,7 +62,12 @@ class LicensesController < ApplicationController
     end
   end
 
+  # GET /licenses/stats or /licenses/stats.json
+  def stats
+  end
+
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_license
     @license = License.find(params[:id])

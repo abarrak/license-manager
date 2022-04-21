@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
   # REST routes
-  resources :licenses
+  resources :licenses do
+    get :stats, on: :collection
+  end
 
   resources :expiry_list, only: [:index]
 end

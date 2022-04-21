@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <title>Managed Assets List - Sample</title>
+</head>
+
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+  <div id='stp-licenseStatus-banner'></div>
+  <div id="page">
+    <div id="full-height-container">
+      <div id="header-precursor">
+        <div class="cell"> </div>
+      </div>
+      <header id="header" role="banner">
+        <a class="aui-skip-link" href="#nav-sidebar">Skip to sidebar</a>
+        <a class="aui-skip-link" href="#main">Skip to main content</a>
+        <nav class="aui-header aui-dropdown2-trigger-group" aria-label="Site">
+          <div class="aui-header-inner">
+            <div class="aui-header-before"><button
+                class=" aui-dropdown2-trigger app-switcher-trigger aui-dropdown2-trigger-arrowless"
+                aria-controls="app-switcher" aria-haspopup="true" role="button" data-aui-trigger
+                href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked
+                  Applications</span></button>
+              <div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" hidden
+                data-is-user-admin="false" data-is-switcher="true">
+                <div class="app-switcher-loading">Loading&hellip;</div>
+              </div>
+            </div>
+            <div class="aui-header-primary"><span id="logo" class="aui-header-logo aui-header-logo-confluence"><a
+                  href="/" aria-label="Go to home page"><span
+                    class="aui-header-logo-device">Confluence</span></a></span>
+              <ul class="aui-nav">
+                <li>
+                  <a id="space-directory-link" href="/spacedirectory/view.action" class=" aui-nav-imagelink"
+                    title="Spaces">
+                    <span>Spaces</span>
+                  </a>
+                </li>
+                <li>
+                  <a id="people-directory-link" href="/browsepeople.action" class=" aui-nav-imagelink" title="People">
+                    <span>People</span>
+                  </a>
+                </li>
+                <li>
+                  <a id="tnqa-questions-link" href="/qa/questions" class=" aui-nav-imagelink" title="">
+                    <span>Questions</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/calendar/mycalendar.action" class=" aui-nav-imagelink" title="Calendars">
+                    <span>Calendars</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/plugins/confanalytics/analytics.action" class=" aui-nav-imagelink" title="Analytics">
+                    <span>Analytics</span>
+                  </a>
+                </li>
+                <li class="aui-buttons"> <a
+                    href="/pages/createpage.action?spaceKey=DM&amp;fromPageId=98774&amp;src=quick-create"
+                    id="quick-create-page-button" class="aui-button aui-button-primary" title='Create blank page'
+                    tabindex="0">Create</a>
+                  <a href="#" id="create-page-button" class="aui-button aui-button-primary clc-create-dialog-btn"
+                    title='Create from template' tabindex="0"><span
+                      class="aui-icon aui-icon-small aui-iconfont-more">Create
+                    </span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="aui-header-secondary">
+              <ul class="aui-nav">
+                <li>
+                  <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch">
+                    <button id="quick-search-query-button" aria-label="Search" aria-haspopup="dialog"
+                      aria-controls="search_drawer"></button><input id="quick-search-query" aria-label="Search"
+                      placeholder="Search" type="text" aria-haspopup="dialog" aria-controls="search_drawer" />
+                    <div id="quick-search-alert" role="alert">Hit enter to search
+                    </div>
+                    <aui-spinner size="small"></aui-spinner>
+                  </div>
+                </li>
+                <li> <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless"
+                    href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+                    <span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span>
+                  </a>
+                  <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default">
+                    <div class="aui-dropdown2-section">
+                      <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                        <li><a id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-717/"
+                            class="    " title="Visit the Confluence documentation home" target="_blank">
+                            Online
+                            Help
+                          </a>
+                        </li>
+                        <li><a id="keyboard-shortcuts-link" href="#" class="    "
+                            title="View available keyboard shortcuts">
+                            Keyboard
+                            Shortcuts
+                          </a>
+                        </li>
+                        <li><a id="feed-builder-link" href="/dashboard/configurerssfeed.action" class="    "
+                            title="Create your custom RSS feed.">
+                            Feed
+                            Builder
+                          </a>
+                        </li>
+                        <li><a id="whats-new-menu-link"
+                            href="https://confluence.atlassian.com/display/DOC/Confluence+7.17+Release+Notes?a=false"
+                            class="    " title="">
+                            What’s
+                            new
+                          </a>
+                        </li>
+                        <li><a id="gadget-directory-link" href="#" class="   user-item administration-link "
+                            title="Browse gadgets provided by Confluence">
+                            Available
+                            Gadgets
+                          </a>
+                        </li>
+                        <li><a id="confluence-about-link" href="/aboutconfluencepage.action" class="    "
+                            title="Get more information about Confluence">
+                            About
+                            Confluence
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </li>
+                <li> </li>
+                <li>
+                  <a id="notifications-anchor" href="#" class="mw-anchor read aui-nav-imagelink" title="">
+                    <span></span>
+                  </a>
+                </li>
+                <li> <a id="user-menu-link" class="aui-dropdown2-trigger aui-dropdown2-trigger-arrowless "
+                    aria-haspopup="true" aria-owns="user-menu-link-content" data-username="my-username" href="#"
+                    title="USER">
+                    <div class="aui-avatar aui-avatar-small">
+                      <div class="aui-avatar-inner">
+                        <img alt="Profile picture for my-username" />
+                      </div>
+                    </div>
+                    <span class="aui-icon-dropdown"></span>
+                  </a>
+                  <nav id="user-menu-link-content" class="aui-dropdown2 aui-style-default">
+                    <div class="aui-dropdown2-section">
+                      <ul id="user-menu-link-user-preferences" class="aui-list-truncate section-user-preferences first">
+                        <li><a id="create-personal-space-link" href="/spaces/createpersonalspace.action"
+                            class="   user-item personal-space create-personal-space-link " title="">
+                            Add
+                            personal
+                            space…
+                          </a>
+                        </li>
+                        <li><a id="view-user-history-link" href="/users/viewuserhistory.action"
+                            class="   user-item user-history popup-link " title="">
+                            Recently
+                            viewed
+                          </a>
+                        </li>
+                        <li><a id="user-recently-worked-on" href="/dashboard.action#recently-worked"
+                            class="   user-item " title="">
+                            Recently
+                            worked
+                            on
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="aui-dropdown2-section">
+                      <ul id="user-menu-link-user-content" class="aui-list-truncate section-user-content">
+                        <li><a id="view-user-profile-link" href="/users/viewmyprofile.action"
+                            class="   user-item user-profile " title="">
+                            Profile
+                          </a>
+                        </li>
+                        <li><a id="view-mytasks-link" href="/plugins/inlinetasks/mytasks.action"
+                            class="   user-item list-user-status " title="">
+                            Tasks
+                          </a>
+                        </li>
+                        <li><a id="user-favourites-link" href="/users/viewmyfavourites.action" class="   user-item "
+                            title="">
+                            Saved
+                            for
+                            later
+                          </a>
+                        </li>
+                        <li><a id="user-watches-link" href="/users/viewnotifications.action" class="   user-item "
+                            title="">
+                            Watches
+                          </a>
+                        </li>
+                        <li><a id="user-drafts-link" href="/users/viewmydrafts.action" class="   user-item " title="">
+                            Drafts
+                          </a>
+                        </li>
+                        <li><a id="user-network-link" href="/users/viewfollow.action?username=my-username"
+                            class="   follow-link " title="">
+                            Network
+                          </a>
+                        </li>
+                        <li><a id="user-settings-link" href="/users/viewmysettings.action" class="   user-item "
+                            title="">
+                            Settings
+                          </a>
+                        </li>
+                        <li><a id="upm-requests-link" href="/plugins/servlet/upm/requests?source=header_user"
+                            class="    " title="">
+                            Atlassian
+                            Marketplace
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="aui-dropdown2-section">
+                      <ul id="user-menu-link-user-operations" class="aui-list-truncate section-user-operations">
+                        <li><a id="logout-link" href="/logout.action" class="   user-item logout-link " title="">
+                            Log Out
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .aui-header-inner-->
+        </nav><!-- .aui-header -->
+        <br class="clear">
+      </header>
+      <div class="ia-splitter">
+        <div class="ia-splitter-left">
+          <div class="ia-fixed-sidebar" role="complementary" aria-label=sidebar>
+            <div class="acs-side-bar ia-scrollable-section">
+              <div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="Edit space details">
+                <div class="avatar">
+                  <div class="space-logo" data-key="DM" data-name="Data Management" data-entity-type="confluence.space">
+                    <div class="avatar-img-container">
+                      <div class="avatar-img-wrapper">
+                        <a href="/display/DM/Data+Management" title="Data Management"><img class="avatar-img"
+                            src="/images/logo/default-space-logo.svg" alt="Data Management"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-information-container">
+                  <div class="name"><a href="/display/DM/Data+Management" title="Data Management">Data
+                      Management</a></div>
+                  <div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit">
+                  </div>
+                  <div class="favourite-space-icon "><button
+                      class="space-favourite aui-icon aui-icon-small aui-iconfont-unstar" id="space-favourite-add"
+                      title="Add to my spaces" aria-pressed="false"></button><button
+                      class="space-favourite-hidden space-favourite aui-icon aui-icon-small aui-iconfont-star"
+                      id="space-favourite-remove" title="Remove from my spaces" aria-pressed="false"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="acs-side-bar-content">
+                <div class="acs-nav-wrapper">
+                  <div class="acs-nav" data-has-create-permission="true" data-quick-links-state="hide"
+                    data-page-tree-state="null" data-nav-type="page-tree">
+                    <div class="acs-nav-sections"></div>
+                  </div>
+                </div>
+                <div class="ia-secondary-container tipsy-enabled" data-tree-type="page-tree">
+                  <div class="ia-secondary-header">
+                    <h2 class="ia-secondary-header-title page-tree">
+                      <span class="icon"></span><span class="label">Page
+                        tree</span>
+                    </h2>
+                  </div>
+                  <div class="ia-secondary-content">
+                    <div class="plugin_pagetree conf-macro output-inline" data-hasbody="false"
+                      data-macro-name="pagetree">
+                      <div class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+                        <div class="plugin_pagetree_children">
+                        </div>
+                      </div>
+                      <fieldset class="hidden">
+                        <input type="hidden" name="treeId" value="" />
+                        <input type="hidden" name="treeRequestId"
+                          value="/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false&amp;expandCurrent=true&amp;placement=sidebar" />
+                        <input type="hidden" name="treePageId" value="98774" /> <input type="hidden" name="noRoot"
+                          value="false" />
+                        <input type="hidden" name="rootPageId" value="98489" /> <input type="hidden" name="rootPage"
+                          value="" />
+                        <input type="hidden" name="startDepth" value="0" />
+                        <input type="hidden" name="spaceKey" value="DM" /> <input type="hidden"
+                          name="i18n-pagetree.loading" value="Loading..." />
+                        <input type="hidden" name="i18n-pagetree.error.permission"
+                          value="Unable to load page tree. It seems that you do not have permission to view the root page." />
+                        <input type="hidden" name="i18n-pagetree.eeror.general"
+                          value="There was a problem retrieving the page tree. Please check the server log file for more information." />
+                        <input type="hidden" name="loginUrl"
+                          value="/login.action?os_destination=%2Fpages%2Fviewpage.action%3FspaceKey%3DDM%26title%3DManaged%2BAssets%2BList&amp;permissionViolation=true" />
+                        <input type="hidden" name="mobile" value="false" />
+                        <input type="hidden" name="placement" value="sidebar" />
+                        <fieldset class="hidden">
+                          <input type="hidden" name="ancestorId" value="98501" />
+                          <input type="hidden" name="ancestorId" value="98489" />
+                        </fieldset>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden"><a href="/collector/pages.action?key=DM" id="space-pages-link"></a>
+                <script type="text/x-template"
+                  title="logo-config-content"><h2>Space Details</h2><div class="personal-space-logo-hint">Your profile picture is used as the logo for your personal space. <a href="/users/profile/editmyprofilepicture.action" target="_blank">Change your profile picture</a>.</div></script>
+              </div>
+            </div>
+            <div class="space-tools-section">
+              <div id="space-tools-menu-additional-items" class="hidden">
+                <div data-label="Reorder pages" data-class="" data-href="/pages/reorderpages.action?key=DM">
+                  Reorder pages</div>
+              </div><button id="space-tools-menu-trigger"
+                class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless "
+                aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger><span
+                  class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span><span
+                  class="aui-button-label">Space tools</span><span class="aui-icon "></span></button>
+              <div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" hidden
+                data-aui-alignment="top left"></div>
+              <a href="#" role="button"
+                class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"
+                aria-expanded="true"></a>
+            </div>
+          </div>
+        </div>
+        <!-- \#header -->
+        <main role="main" id="main" class=" aui-page-panel">
+          <div id="main-header">
+            <div id="navigation" class="content-navigation view" role="region" aria-label="Page tools">
+              <ul class="ajs-menu-bar">
+                <li class="ajs-button normal"> <a id="editPageLink" href="/pages/editpage.action?pageId=98774"
+                    rel="nofollow" class="aui-button aui-button-subtle edit full-load" accessKey="e" title="Edit">
+                    <span>
+                      <span class="aui-icon aui-icon-small aui-iconfont-edit"></span>
+                      <u>E</u>dit
+                    </span> </a>
+                </li>
+                <li class="ajs-button normal"> <a id="page-favourite" href="#" rel="nofollow"
+                    class="aui-button aui-button-subtle action-page-favourite" accessKey="f" title="Save for later">
+                    <span>
+                      <span class="aui-icon aui-icon-small aui-iconfont-unstar"></span>
+                      Save <u>f</u>or later
+                    </span> </a>
+                </li>
+                <li class="ajs-button normal"> <a id="watch-content-button" href="#" rel="nofollow"
+                    class="aui-button aui-button-subtle watch-menu" title="Watch (w)">
+                    <span>
+                      <span class="aui-icon aui-icon-small aui-iconfont-unwatch"></span>
+                      <u>W</u>atch
+                    </span> </a>
+                </li>
+                <li class="ajs-button normal"> <a id="shareContentLink" href="#" rel="nofollow"
+                    class="aui-button aui-button-subtle share" title="Share this page with others">
+                    <span>
+                      <span class="aui-icon aui-icon-small aui-iconfont-share"></span>
+                      <u>S</u>hare
+                    </span> </a>
+                </li>
+                <li class="normal ajs-menu-item">
+                  <a id="action-menu-link"
+                    class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger"
+                    href="#" aria-haspopup="true" aria-label="More options" aria-owns="action-menu"
+                    data-container="#navigation">
+                    <span>
+                      <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="More options"></span> </span>
+                  </a>
+                  <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                      <ul id="action-menu-primary" class="section-primary first">
+                        <li><a id="view-attachments-link" href="/pages/viewpageattachments.action?pageId=98774"
+                            rel="nofollow" class="action-view-attachments" accessKey="t" title="View Attachments">
+                            <span>
+                              A<u>t</u>tachments
+                              (0)
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-view-history-link" href="/pages/viewpreviousversions.action?pageId=98774"
+                            rel="nofollow" class="action-view-history" title="">
+                            <span>
+                              Page
+                              History
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-page-permissions-link" href="/pages/viewinfo.action?pageId=98774"
+                            rel="nofollow" class="action-page-permissions" title="Edit restrictions">
+                            <span>
+                              Restrictions
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="who-can-view-button-ak-button" href="#" rel="nofollow" class="who-can-view-link"
+                            title="">
+                            <span>
+                              People
+                              who
+                              can
+                              view
+                            </span>
+                          </a>
+                        </li>
+                        <li><a href="/plugins/confanalytics/analytics.action?key=DM#/analytics/content/page/98774"
+                            rel="nofollow" class="" title="Summary of views and activity">
+                            <span>
+                              Analytics
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="aui-dropdown2-section">
+                      <ul id="action-menu-secondary" class="section-secondary">
+                        <li><a id="view-page-info-link" href="/pages/viewinfo.action?pageId=98774" rel="nofollow"
+                            class="action-view-info" title="">
+                            <span>
+                              Page
+                              Information
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="view-resolved-comments" href="#" rel="nofollow" class="" title="">
+                            <span>
+                              Resolved
+                              comments
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="view-in-hierarchy-link"
+                            href="/pages/reorderpages.action?key=DM&amp;openId=98774#selectedPageInHierarchy"
+                            rel="nofollow" class="" title="">
+                            <span>
+                              View
+                              in
+                              Hierarchy
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-view-source-link" href="/plugins/viewsource/viewpagesrc.action?pageId=98774"
+                            rel="nofollow" class="action-view-source popup-link" title="">
+                            <span>
+                              View
+                              Source
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-export-pdf-link" href="/spaces/flyingpdf/pdfpageexport.action?pageId=98774"
+                            rel="nofollow" class="" title="">
+                            <span>
+                              Export
+                              to
+                              PDF
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-export-word-link" href="/exportword?pageId=98774" rel="nofollow"
+                            class="action-export-word" title="">
+                            <span>
+                              Export
+                              to
+                              Word
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="import-word-doc" href="/pages/worddav/uploadimport.action?pageId=98774"
+                            rel="nofollow" class="" title="">
+                            <span>
+                              Import
+                              Word
+                              Document
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="aui-dropdown2-section">
+                      <ul id="action-menu-modify" class="section-modify">
+                        <li><a id="action-copy-page-link"
+                            href="/pages/copypage.action?idOfPageToCopy=98774&amp;spaceKey=DM" rel="nofollow"
+                            class="action-copy" title="">
+                            <span>
+                              Copy
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-move-page-dialog-link" href="/pages/viewpage.action?pageId=98774"
+                            rel="nofollow" class="action-move" title="">
+                            <span>
+                              Move
+                            </span>
+                          </a>
+                        </li>
+                        <li><a id="action-remove-content-link" href="/pages/removepage.action?pageId=98774"
+                            rel="nofollow" class="action-remove" title="">
+                            <span>
+                              Delete
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+              <div id="breadcrumb-section">
+                <nav aria-label="Breadcrumbs">
+                  <ol id="breadcrumbs">
+                    <li class="first"> <span class=""><a href="/collector/pages.action?key=DM">Pages</a></span>
+                    <li> <span class=""><a href="/display/DM/Data+Management">Data
+                          Management</a></span>
+                    <li> <span class=""><a href="/display/DM/SRE">SRE</a></span>
+                  </ol>
+                </nav>
+              </div>
+              <div id="page-metadata-banner">
+                <ul class="banner">
+                  <li id="system-content-items" class="noprint"><a href="" title="Unrestricted"
+                      id="content-metadata-page-restrictions"
+                      class="aui-icon aui-icon-small aui-iconfont-unlocked system-metadata-restrictions"></a>
+                  </li>
+                  <li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href=""
+                      title="" id="content-metadata-jira"
+                      class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>Jira
+                        links</span></a></li>
+                  <li class="page-metadata-item noprint"><a
+                      href="/plugins/confanalytics/analytics.action?key=DM#/analytics/content/page/98774"
+                      title="Summary of views and activity" class="analytics-metadata-button-test"><img
+                        class="page-banner-item-icon"
+                        src="/s/a5wqlt/8803/112evhk/_/download/resources/com.addonengine.analytics:analytics-resources/images/icons/analytics-content-byline-icon-adg3@2x.png"
+                        style="height: 16px; width: 16px;" /><span>Analytics</span></a>
+                  </li>
+                </ul>
+              </div>
+              <h1 id="title-text" class="with-breadcrumbs">
+                <a href="/display/DM/Managed+Assets+List">Managed Assets
+                  List</a>
+              </h1>
+            </div>
+          </div><!-- \#main-header -->
+          <div id="sidebar-container">
+          </div><!-- \#sidebar-container -->
+          <div id="content" class="page view">
+            <div id="action-messages">
+            </div>
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+            <script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+            <script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+            <div class="page-metadata">
+              <ul>
+                <li class="page-metadata-modification-info"> Created by <span class='author'> <a href="    /display/~my-username
+" aria-label="created by USER" class="url fn confluence-userlink" data-username="my-username">USER</a></span>, last
+                  modified on <a class='last-modified' aria-label='modified on Apr 03, 2022, select to show changes'
+                    title='Show changes'
+                    href='/pages/diffpagesbyversion.action?pageId=98774&amp;selectedPageVersions=3&amp;selectedPageVersions=4'>Apr
+                    03, 2022</a>
+                </li>
+              </ul>
+            </div>
+            <div id="main-content" class="wiki-content">
+              <div class="table-wrap">
+                <table class="relative-table wrapped confluenceTable" style="width: 95.5923%;">
+                  <colgroup>
+                    <col style="width: 13.2066%;" />
+                    <col style="width: 9.51564%;" />
+                    <col style="width: 9.22729%;" />
+                    <col style="width: 9.16962%;" />
+                    <col style="width: 9.28496%;" />
+                    <col style="width: 12.3992%;" />
+                    <col style="width: 10.496%;" />
+                    <col style="width: 3.46023%;" />
+                    <col style="width: 2.76819%;" />
+                    <col style="width: 7.20808%;" />
+                    <col style="width: 7.90087%;" />
+                    <col style="width: 5.36336%;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        License</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Employees (&&)</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Employees (&&)</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Employees (&&)</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Employees (&&)</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Employees (&&)</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        # of Available Licenses
+                      </td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        Unit</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        Gap</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        Expiry Date </td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        Business Owner</td>
+                      <td class="highlight-#f4f5f7 confluenceTd" style="text-align: left;"
+                        title="Background colour : Light grey 100%" data-highlight-colour="#f4f5f7">
+                        Operator</td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">RedHat
+                        7</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Server</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        N/A</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Gitlab
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">19
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">20
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">40
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        9/3/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Dataiku
+                        Server</td>
+                      <td style="text-align: center;" class="confluenceTd">2
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">-1
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/3/2023</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Dataiku
+                        Designer</td>
+                      <td style="text-align: center;" class="confluenceTd">25
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">40
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">65
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/3/2023</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Tableau
+                        Creator</td>
+                      <td style="text-align: center;" class="confluenceTd">2
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">40
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">6
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">-36
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        11/5/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Tableau
+                        Viewer</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">75
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">75
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        11/5/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        IBM-Cloudera Data
+                        Platform</td>
+                      <td style="text-align: center;" class="confluenceTd">19
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">81
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/3/2024</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        IBM-Cloudera Flow
+                        Management</td>
+                      <td style="text-align: center;" class="confluenceTd">19
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">27
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/3/2024</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        IBM-Cloudera Data
+                        Platform - Stream
+                        Edition</td>
+                      <td style="text-align: center;" class="confluenceTd">19
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">18
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/3/2024</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        Cloudera EDHE</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/11/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        Cloudera Navigator
+                        Optimizer</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/11/2023</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        Cloudera Workload XM
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">19
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">5
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Node</td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        30/11/2024</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Neo4j
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">7
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">128
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">RAM
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">-
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">DE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        JetBrain</td>
+                      <td style="text-align: center;" class="confluenceTd">7
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">20
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">30
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">3
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        5/9/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">G
+                        Suites</td>
+                      <td style="text-align: center;" class="confluenceTd">24
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">22
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">6
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">120
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">68
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        18/10/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">E.
+                        Office </td>
+                      <td style="text-align: center;" class="confluenceTd">E.
+                        Office</td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Nessus
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">~
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">2
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        Server</td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        7/6/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        BurpSuit</td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Sketch
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">2
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">2
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        22/9/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Zeplin
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">7
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">6
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">-1
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        10/3/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Adobe
+                        Creative Cloud</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        1/9/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        Principle for Mac</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        N/A</td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Tableau
+                        Data Management</td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">81
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">80
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        11/5/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Tableau
+                        Server Management</td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">0
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">81
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">80
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        11/5/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">DA
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">Jira
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">1
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        User</td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td class="highlight-#fffae6 confluenceTd" style="text-align: center;"
+                        title="Background colour : Light yellow 35%" data-highlight-colour="#fffae6">
+                        12/30/2022</td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">SRE
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="confluenceTd">
+                        Synopsys </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">
+                        <br />
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                      <td style="text-align: center;" class="confluenceTd">PD
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="labels-section" class="pageSection group">
+              <div class="labels-section-content content-column" entityid="98774" entitytype="page">
+                <div class="labels-content">
+                  <ul class="label-list label-list-right  has-pen">
+                    <li class="no-labels-message">
+                      No labels
+                    </li>
+                    <li class="labels-edit-container">
+                      <a href="#" class="show-labels-editor" title="Edit Labels">
+                        <span class="aui-icon aui-icon-small aui-iconfont-devtools-tag-small">Edit
+                          Labels</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="comments-section" class="pageSection group">
+              <div class="bottom-comment-panels comment-panels">
+                <div class="quick-comment-container comment add">
+                  <p class="comment-user-logo"><a class="userLogoLink" data-username="my-username"
+                      href="/users/profile/editmyprofilepicture.action" title="Add a picture of yourself"><img
+                        class="userLogo logo defaultLogo"
+                        src="/s/a5wqlt/8803/112evhk/_/images/icons/profilepics/add_profile_pic.svg"
+                        alt="User icon: Add a picture of yourself"></a>
+                  </p>
+                  <div class="quick-comment-body">
+                    <div class="quick-comment-loading-container" style="display:none;"></div>
+                    <div id="editor-messages"></div>
+                    <div id="any-messages"></div>
+                    <form style="display:block;" class="quick-comment-form aui" method="post" name="inlinecommentform"
+                      action="/pages/doaddcomment.action?pageId=98774">
+                      <div title="Add a Comment" role="button" tabindex="0" aria-label="Add a Comment"
+                        class="quick-comment-prompt">
+                        <span>Write a
+                          comment…</span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div id="comments-actions" class="aui-toolbar noprint">
+                <p class="toolbar-group">
+                  <span class="toolbar-item"><a
+                      href="/display/DM/Managed+Assets+List?showComments=true&amp;showCommentArea=true#addcomment"
+                      id="add-comment-rte" accesskey="m" class="toolbar-trigger full-load">Add
+                      Comment</a></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="space-tools-web-items" class="hidden">
+            <div data-label="Overview" data-href="/spaces/viewspacesummary.action?key=DM">Overview
+            </div>
+            <div data-label="Content Tools" data-href="/pages/reorderpages.action?key=DM">Content Tools
+            </div>
+          </div>
+        </main><!-- \#main -->
+      </div>
+    </div><!-- \#full-height-container -->
+  </div><!-- \#page -->
+</body>
+
+</html>
