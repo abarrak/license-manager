@@ -52,7 +52,7 @@ module Scrapable
     def scrape_list
       @scraped_list = []
       @document = Nokogiri::HTML @raw_page
-      lines = @document.css 'table.confluenceTable tbody tr'
+      lines = @document.css 'table tbody tr'
       lines.each.with_index do |line, i|
         next if i == 0
 
