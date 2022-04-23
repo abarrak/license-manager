@@ -81,7 +81,10 @@ module Scrapable
     end
 
     def save_models
-      @scraped_list.each { |l| License.find_or_create_by! l }
+      @scraped_list.each do |l|
+        model = License.find_or_create_by! l
+        model.create_license_expiry! days_count: 10 unless model.license_expiry&.persisted?
+      end
     end
   end
 end
