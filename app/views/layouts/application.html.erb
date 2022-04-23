@@ -15,11 +15,9 @@
     <%= render 'layouts/header' %>
 
     <% if flash.any? %>
-      <blockquote>
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: "alert alert-#{name}" %>
-        <% end %>
-      </blockquote>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "#{name}" %>
+      <% end %>
     <% end %>
 
     <%= yield %>

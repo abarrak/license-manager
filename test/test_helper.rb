@@ -3,6 +3,7 @@ require_relative "../config/environment"
 require "rails/test_help"
 require 'minitest/pride'
 require 'minitest/reporters'
+require 'webmock/minitest'
 
 Minitest::Reporters.use! Minitest::Reporters::DefaultReporter.new, ENV, Minitest.backtrace_filter
 

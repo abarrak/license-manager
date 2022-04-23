@@ -15,6 +15,7 @@ gem "redis", "~> 4.0"
 gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "annotate"
+gem "faraday"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -39,4 +40,5 @@ group :test do
   gem "webdrivers"
   gem "minitest-reporters"
   gem "rails-controller-testing"
+  gem "webmock"
 end

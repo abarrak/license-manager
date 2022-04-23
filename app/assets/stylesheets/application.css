@@ -23,3 +23,15 @@
 .license_actions {
   text-align: right;
 }
+
+.notice {
+  color: darkgreen;
+  border: 0.1rem solid darkgreen;
+  background-color: lightgreen;
+}
+
+.errort {
+  color: darkred;
+  border: 0.1rem solid darkred;
+  background-color: rgb(250, 183, 183);
+}

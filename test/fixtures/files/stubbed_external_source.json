@@ -1,0 +1,48 @@
+{
+  "_expandable": {
+    "ancestors": "",
+    "children": "",
+    "container": "",
+    "history": "/rest/api/content/3965072/history",
+    "metadata": "",
+    "space": "/rest/api/space/TST",
+    "version": ""
+  },
+  "_links": {
+    "base": "http://localhost:8080/confluence",
+    "collection": "/rest/api/contents",
+    "self": "http://localhost:8080/confluence/rest/api/content/3965072",
+    "tinyui": "/x/kIA8",
+    "webui": "/display/TST/Test+Page"
+  },
+  "body": {
+    "editor": {
+      "_expandable": {
+        "content": "/rest/api/content/3965072"
+      },
+      "representation": "editor"
+    },
+    "export_view": {
+      "_expandable": {
+        "content": "/rest/api/content/3965072"
+      },
+      "representation": "export_view"
+    },
+    "storage": {
+      "_expandable": {
+        "content": "/rest/api/content/3965072"
+      },
+      "representation": "storage",
+      "value": "<REPLACE_BY_HTML>"
+    },
+    "view": {
+      "_expandable": {
+        "content": "/rest/api/content/3965072"
+      },
+      "representation": "view"
+    }
+  },
+  "id": "3965072",
+  "title": "Test Page",
+  "type": "page"
+}

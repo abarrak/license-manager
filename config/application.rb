@@ -16,7 +16,13 @@ module LicenseManager
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    config.time_zone = "Riyadh"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.time_zone = "Riyadh"
+
+    unless Rails.env.test?
+      Rails.logger = Logger.new(STDOUT)
+      config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
+    end
   end
 end
