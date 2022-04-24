@@ -156,6 +156,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
+    prometheus-client (4.0.0)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -263,6 +264,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   minitest-reporters
+  prometheus-client
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   rails-controller-testing

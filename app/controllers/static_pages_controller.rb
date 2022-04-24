@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  include Prometheus::Controller
+
   def main
   end
 

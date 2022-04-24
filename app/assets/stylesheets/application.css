@@ -35,3 +35,11 @@
   border: 0.1rem solid darkred;
   background-color: rgb(250, 183, 183);
 }
+
+footer {
+  bottom: 0;
+}
+
+.text-right {
+  text-align: right;
+}

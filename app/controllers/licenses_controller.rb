@@ -62,8 +62,7 @@ class LicensesController < ApplicationController
     end
   end
 
-  # GET /licenses/stats or /licenses/stats.json
-  def stats
+  def metrics
   end
 
   private

@@ -16,13 +16,18 @@ module LicenseManager
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.eager_load_paths << Rails.root.join("lib")
 
     config.time_zone = "Riyadh"
 
     unless Rails.env.test?
-      Rails.logger = Logger.new(STDOUT)
+      logger = ActiveSupport::Logger.new(STDOUT)
+      logger.formatter = config.log_formatter
       config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
+    end
+
+    config.after_initialize do
+      Prometheus::Controller.setup_metrics
     end
   end
 end

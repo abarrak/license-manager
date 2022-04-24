@@ -1,10 +1,14 @@
+<% provide :title, @license.title %>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @license %>
 
 <div>
-  <%= link_to "Edit this license", edit_license_path(@license) %> |
-  <%= link_to "Back to licenses", licenses_path %>
+  <%= link_to "Edit 📝", edit_license_path(@license) %> |
+  <%= link_to "Back ⮐", licenses_path %>
 
-  <%= button_to "Destroy this license", @license, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+  <div class="text-right">
+    <%= button_to "Destroy 🗑", @license, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+  </div>
 </div>
