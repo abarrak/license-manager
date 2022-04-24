@@ -1,5 +1,20 @@
-<% provide :title, "Expired" %>
+<% provide :title, @page_title %>
 
-<h2>Expired Licenses</h2>
-@li
+<h2><%= @page_title %> Licenses</h2>
 
+<% @records.each.with_index do |record, i| %>
+  <div>
+    <p> <b><%= i + 1 %>.</b>
+      &nbsp;&nbsp;<i>Name:</i> <%= record.title %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Expiry Date:</i> <%= record.current_expire_date %><br>
+      <% if record.license_expiry&.days_count %>
+        <i>EDays Remaining:</i><%= record.license_expiry.days_count %><br>
+      <% end %>
+    </p>
+    <hr>
+  </div>
+<% end %>
+
+<% if @records.none? %>
+  <p class="notice">No licenses matching the criteria yet.</p>
+<% end %>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get :metrics, on: :collection
   end
 
-  get "expired" => "expiry#expired"
-  get "stats"   => "expiry#stats"
+  get "expired"      => "expiry#expired"
+  get "expires_soon" => "expiry#expires_soon"
+  get "stats"        => "expiry#stats"
 end

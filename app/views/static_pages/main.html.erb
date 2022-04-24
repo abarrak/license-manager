@@ -2,9 +2,12 @@
   <div>
     <p>Here's a few links to navigate you around ..</p>
     <ul>
-      <li><%= link_to 'Expiring Soon', expired_path %> ⏰</li>
+      <li><%= link_to 'Expired Licenses', expired_path %> ⏰</li>
+      <li><%= link_to 'About To Expire', expires_soon_path %> 📅</li>
       <li><%= link_to 'Licenses List', licenses_path %> 📒</li>
-      <li><%= link_to 'Stats', stats_path %> 📊</li>
+      <%# <li> %>
+        <%# <%= link_to 'Stats', stats_path %>
+      <%# 📊</li> %>
       <li><%= link_to 'New License', new_license_path %> 📝</li>
     </ul>
   </div>

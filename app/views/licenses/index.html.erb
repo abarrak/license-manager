@@ -8,7 +8,7 @@
 <div id="licenses">
   <% @licenses.each do |license| %>
     <div id="<%= dom_id license %>" class="license_box">
-      <%= license.id %>) : <%= license.title %>
+      - Id: <%= license.id %><br>- Title: <%= license.title %>
       <div class="text-right"><%= link_to "Details", license %></div>
     </div>
   <% end %>
@@ -16,4 +16,8 @@
     <p class="license_box">There are no licenses yet.</p>
   <% end %>
 </div>
+
+<p class="text-right">
+  <small>total of <%= @licenses.count %> licenses.</small>
+</p>
 

@@ -14,13 +14,15 @@
   <body>
     <%= render 'layouts/header' %>
 
-    <% if flash.any? %>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, class: "#{name}" %>
+    <div id="page_container">
+      <% if flash.any? %>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :p, msg, class: "#{name}" %>
+        <% end %>
       <% end %>
-    <% end %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <%= render 'layouts/footer' %>
   </body>
