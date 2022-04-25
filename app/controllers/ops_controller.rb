@@ -3,6 +3,8 @@ class OpsController < ApplicationController
   end
 
   def clear
+    Ops.clear_all
+    redirect_to :dashboard, notice: "All licenses in the system are deleted successfully."
   end
 
   def sync
