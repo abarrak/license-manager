@@ -23,6 +23,8 @@ class License < ApplicationRecord
   validates :title, length: { minimum: 2, maximum: 30 }, uniqueness: true
   validate :valid_expiry_date_format?
 
+  after_create :save_expiry_record
+
   private
 
   def valid_expiry_date_format?
@@ -31,5 +33,9 @@ class License < ApplicationRecord
     add_error.call unless self[:current_expire_date]&.to_date
   rescue Date::Error
     add_error.call
+  end
+
+  def save_expiry_record
+    create_license_expiry! days_count: 10 unless self.license_expiry&.persisted?
   end
 end

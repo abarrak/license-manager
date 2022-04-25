@@ -1,0 +1,7 @@
+<% provide :title, "Ops Dashboard" %>
+<h3>Ops Dashboard</h3>
+
+<p>
+  <%= button_to "Sync Now", ops_sync_path, method: :patch, form: { data: { turbo_confirm: 'Resync from external source?' } } %>
+  <%= button_to "Clear All", ops_clear_path, method: :patch, form: { data: { turbo_confirm: 'Confirm deleting all licenses?' } } %>
+</p>

@@ -5,10 +5,10 @@
 <% @records.each.with_index do |record, i| %>
   <div>
     <p> <b><%= i + 1 %>.</b>
-      &nbsp;&nbsp;<i>Name:</i> <%= record.title %><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Expiry Date:</i> <%= record.current_expire_date %><br>
+      &nbsp;&nbsp;<i>Name: </i> <%= record.title %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Expiry at:</i> <%= record.current_expire_date %><br>
       <% if record.license_expiry&.days_count %>
-        <i>EDays Remaining:</i><%= record.license_expiry.days_count %><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Days remaining: </i><%= record.license_expiry.days_count %><br>
       <% end %>
     </p>
     <hr>

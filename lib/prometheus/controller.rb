@@ -1,24 +1,29 @@
 module Prometheus
   module Controller
     def self.setup_metrics
-      @prometheus = Prometheus::Client.registry
+      @prometheus ||= Prometheus::Client.registry
 
-      @total ||= begin
-        gauge = Prometheus::Client::Gauge.new :total_licenses_count, docstring: 'The total licenses managed.'
-        @prometheus.register gauge
-      end
+      register_gauge :total_licenses_count, 'The total licenses managed.', :hint
+      register_gauge :expired_licenses_count, 'The number of expired licenses count.', :names
+      register_gauge :expiring_licenses_count, 'The number of expiring soon licenses (< 30 days).', :names
 
-      @expired ||= begin
-        gauge = Prometheus::Client::Gauge.new :expired_licenses_count, docstring: 'The number of expired licenses count.'
-        @prometheus.register gauge
-        gauge
-      end
+    end
 
-      @expiring ||= begin
-        gauge = Prometheus::Client::Gauge.new :expiring_licenses_count, docstring: 'The number of expiring soon licenses (< 30 days).'
-        @prometheus.register gauge
-        gauge
-      end
+    def self.clear_metrics
+      @prometheus ||= Prometheus::Client.registry
+      unregister_gauge :total_licenses_count
+      unregister_gauge :expired_licenses_count
+      unregister_gauge :expiring_licenses_count
+    end
+
+    def self.register_gauge key, docstring, *labels
+      gauge = Prometheus::Client::Gauge.new key, docstring: docstring, labels: labels
+      @prometheus.register(gauge)
+      gauge
+    end
+
+    def self.unregister_gauge key
+      @prometheus.unregister key
     end
   end
 end

@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get "expired"      => "expiry#expired"
   get "expires_soon" => "expiry#expires_soon"
   get "stats"        => "expiry#stats"
+
+  get    'dashboard' => "ops#dashboard"
+  patch  'ops_clear' => "ops#clear"
+  patch  'ops_sync'  => "ops#sync"
 end

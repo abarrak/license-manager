@@ -5,7 +5,7 @@ class ExpiryController < ApplicationController
   end
 
   def expires_soon
-    @records = find_records 0..29
+    @records = find_records 1..29
     @page_title = 'Expiring Soon'
     render :expired
   end
