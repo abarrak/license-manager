@@ -12,11 +12,17 @@ class LicenseExpiry < ApplicationRecord
   belongs_to :license
   validates :days_count, presence: true, numericality: { only_integer: true, greater_than_or_equal: 0 }
 
+  before_create :calculate_expiry
+
   def self.calculate_all_expiries!
-    calculator = ExpiryCalculator.new
     includes(:license).all.each do |record|
-      record.days_count = calculator.calculate record.license
-      record.save!
+      record.calculate_expiry
+      record.save
     end
+  end
+
+  def calculate_expiry
+    calculator = ExpiryCalculator.new
+    self[:days_count] = calculator.calculate self.license
   end
 end

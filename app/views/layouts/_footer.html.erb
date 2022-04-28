@@ -2,6 +2,10 @@
 <footer id="footer">
   <p>
     <%= link_to 'License Manager', root_path %> - Assets inventory management tool <br>
-    <small>Made with ❤️ by: SRE Team</small> - (<%= Date.today.year %>).
+    <small>Made with ❤️ by: <b>SRE Team</b></small> - (<%= Date.today.year %>).
+    <br>
+    <small><%= link_to 'Dashboard', dashboard_path %></small> |
+    <small><%= link_to 'About', about_path %></small> |
+    <small><%= link_to 'Contact', contact_path %></small>
   </p>
 </footer>

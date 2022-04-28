@@ -36,6 +36,6 @@ class License < ApplicationRecord
   end
 
   def save_expiry_record
-    create_license_expiry! days_count: 10 unless self.license_expiry&.persisted?
+    create_license_expiry! days_count: 0 unless self.license_expiry&.persisted?
   end
 end

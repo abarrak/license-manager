@@ -35,7 +35,7 @@
   color: darkgreen;
   border: 0.1rem solid darkgreen;
   padding: 0.5rem;
-  background-color: lightgreen;
+  background-color: rgb(202, 248, 202);
 }
 
 .error {

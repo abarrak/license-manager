@@ -23,7 +23,7 @@ set :output, "/var/logs/license_manager_cron.log"
 
 every 1.day, at: "1:00 pm" do
   runner "CollectInventoryJob.perform_now"
-  runner "RunExpiryChecksJob.perform_later"
+  runner "RunExpiryChecksJob.set(wait: 5.seconds).perform_now"
 end
 
 
