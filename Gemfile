@@ -16,6 +16,7 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "annotate"
 gem "faraday"
+gem "net-http"
 gem "whenever"
 gem "dotenv-rails"
 gem "prometheus-client"
