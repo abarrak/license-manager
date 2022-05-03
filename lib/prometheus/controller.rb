@@ -3,7 +3,7 @@ module Prometheus
     def self.setup_metrics
       @prometheus ||= Prometheus::Client.registry
 
-      register_gauge :total_licenses_count, 'The total licenses managed.', :hint
+      register_gauge :total_licenses_count, 'The total licenses managed.', :names
       register_gauge :expired_licenses_count, 'The number of expired licenses count.', :names
       register_gauge :expiring_licenses_count, 'The number of expiring soon licenses (< 30 days).', :names
 
