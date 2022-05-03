@@ -227,6 +227,8 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    sucker_punch (3.0.1)
+      concurrent-ruby (~> 1.0)
     thor (1.2.1)
     timeout (0.2.0)
     turbo-rails (1.0.1)
@@ -283,6 +285,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  sucker_punch
   turbo-rails
   web-console
   webdrivers

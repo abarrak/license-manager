@@ -20,6 +20,7 @@ gem "net-http"
 gem "whenever"
 gem "dotenv-rails"
 gem "prometheus-client"
+gem "sucker_punch"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

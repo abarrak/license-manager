@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
+require "prometheus/client/data_stores/direct_file_store"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -26,7 +27,14 @@ module LicenseManager
       config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
     end
 
+    config.active_job.queue_adapter = :sucker_punch
+
     config.after_initialize do
+      metrics_dir = Rails.root.join '/tmp/prometheus'
+
+      Dir["#{metrics_dir}/*.bin"].each { |file_path| File.unlink(file_path) }
+      Prometheus::Client.config.data_store = Prometheus::Client::DataStores::DirectFileStore.new(dir: metrics_dir)
+
       Prometheus::Controller.setup_metrics
     end
   end

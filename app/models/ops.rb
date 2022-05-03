@@ -3,8 +3,8 @@ class Ops
 
   def self.sync_now
     CollectInventoryJob.perform_now
-    RunExpiryChecksJob.set(wait: 3.seconds).perform_later
-    GenerateCustomMetricsJob.set(wait: 5.seconds).perform_later
+    RunExpiryChecksJob.set(wait: 5.seconds).perform_now
+    GenerateCustomMetricsJob.set(wait: 8.seconds).perform_now
   end
 
   def self.clear_all
