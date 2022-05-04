@@ -26,4 +26,4 @@ every :minute do
 end
 
 
-# run the following  whenever --update-crontab as part of deployment process.
+# run the following whenever --update-crontab as part of deployment process.
