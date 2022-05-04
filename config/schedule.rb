@@ -19,11 +19,11 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 #
-set :output, "./log/license_manager_cron.log"
+set :output, "./log/cron.log"
+ENV.each { |k, v| env(k, v) }
 
 every :minute do
   runner "Ops.sync_now"
 end
 
-
-# run the following whenever --update-crontab as part of deployment process.
+# Run the following: `whenever --update-crontab` as part of deployment process.
