@@ -8,9 +8,6 @@ class GenerateCustomMetricsJob < ApplicationJob
   end
 
   def perform(*args)
-    metrics_dir = Rails.root.join 'tmp', 'prometheus'
-    Prometheus::Client.config.data_store = Prometheus::Client::DataStores::DirectFileStore.new(dir: metrics_dir)
-
     Prometheus::Controller.clear_metrics
     Prometheus::Controller.setup_metrics
 

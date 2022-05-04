@@ -7,6 +7,9 @@ rm -f /app/tmp/pids/server.pid
 rm -fr /app/log/*.log
 touch /app/log/cron.log
 
+bundle exec rails db:migrate
+bundle exec rails assets:precompile
+
 service cron start
 bundle exec whenever --update-crontab
 
