@@ -22,7 +22,7 @@
 set :output, "./log/cron.log"
 ENV.each { |k, v| env(k, v) }
 
-every :minute do
+every 2.minutes do
   runner "Ops.sync_now"
 end
 

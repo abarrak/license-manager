@@ -1,0 +1,7 @@
+- job_name: "license-manager"
+  scrape_interval: 60s
+  static_configs:
+  - targets: ["license-manager.default.svc.cluster.local:8700"]
+    labels:
+      env: 'production'
+      app: 'license-manager'
