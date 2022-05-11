@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: license-manager
+  name: license-manager
+  namespace: sre-apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: license-manager
+  template:
+    metadata:
+      labels:
+        app: license-manager
+    spec:
+      containers:
+      - image: apps/license-manager-web:latest
+        imagePullPolicy: IfNotPresent
+        name: license-manager-web
+        resources:
+          limits:
+            memory: "600Mi"
+            cpu: "800m"
+          requests:
+            memory: "400Mi"
+            cpu: "400m"
+      restartPolicy: Always

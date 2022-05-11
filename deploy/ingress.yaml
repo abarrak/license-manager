@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: license-manager
+  namespace: sre-apps
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - host: license-manager.example.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: "/"
+        backend:
+          service:
+            name: license-manager
+            port:
+              number: 8700
+  tls:
+    - hosts:
+      - license-manager.example.com
+      secretName: sre-apps-tls
