@@ -3,10 +3,8 @@ kind: Ingress
 metadata:
   name: license-manager
   namespace: sre-apps
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  annotations: {}
 spec:
-  ingressClassName: nginx-example
   rules:
   - host: license-manager.example.com
     http:

@@ -1,6 +1,5 @@
 kind: Service
 metadata:
-  creationTimestamp: null
   labels:
     app: license-manager
   name: license-manager

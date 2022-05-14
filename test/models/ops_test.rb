@@ -8,11 +8,11 @@ class OpTest < ActiveSupport::TestCase
   end
 
   test "ensure that #sync_now enqueue all necessary jobs" do
-    assert_performed_jobs 2 do
+    assert_performed_jobs 3 do
       Ops.sync_now
     end
 
-    assert_enqueued_jobs 2 do
+    assert_enqueued_jobs 3 do
       Ops.sync_now
     end
   end
