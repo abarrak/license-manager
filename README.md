@@ -9,9 +9,7 @@ This is a simple application to manage and monitor the license activation and de
 3. Alerts on expired licenses
 3. Support for Prometheous exporter `/metrics` endpoints.
 
-<image src="https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/1.png" width="80%" />
-
-<image src="https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/2.png" width="80%" />
+<image src="https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/2.png" width="60%" />
 
 ## Deployment
 
