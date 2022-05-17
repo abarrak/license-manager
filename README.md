@@ -4,13 +4,25 @@ This is a simple application to manage and monitor the license activation and de
 
 ## Features
 
-1. Simple CRUD screens for managing inventory.
-2. Alerts on expired licenses.
+1. Integration with confluence inventory page (Atlassian) through API scraping feature.
+2. Simple CRUD screens for managing inventory.
+3. Alerts on expired licenses
 3. Support for Prometheous exporter `/metrics` endpoints.
+
+<image src="https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/1.png" width="80%" />
+
+<image src="https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/2.png" width="80%" />
 
 ## Deployment
 
 Apply the resources in `./deploy` to create the application in kubernetes cluster.
+
+## Architecture
+
+The main idea behind the solution is to fetch periodically list of managed assets or licenses from web page and instrument them through prometheus and grafana for easy monitoring and notification. The picture below summerizes the architecture:
+
+![architecture](https://raw.githubusercontent.com/abarrak/license-manager/main/screenshots/architecture.png)
+
 
 ## Prometheus & Grafana Integration
 
