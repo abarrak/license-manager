@@ -2,7 +2,9 @@
 
 <h2>Licenses</h2>
 
-<%= button_to "New license", new_license_path, method: :get, form_class: "license_actions" %>
+<% if crud_enabled? %>
+  <%= button_to "New license", new_license_path, method: :get, form_class: "license_actions" %>
+<% end %>
 <br>
 
 <div id="licenses">

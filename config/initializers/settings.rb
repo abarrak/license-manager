@@ -6,3 +6,6 @@ Rails.configuration.x.scraping.domain = ENV["SCRAPE_DOMAIN"]
 Rails.configuration.x.scraping.access_email = ENV["SCRAPE_ACCESS_EMAIL"]
 Rails.configuration.x.scraping.access_token = ENV["SCRAPE_ACCESS_TOKEN"]
 Rails.configuration.x.scraping.page_content_id = ENV["SCRAPE_ASSETS_CONFLUENCE_PAGE_ID"]
+
+
+Rails.configuration.allow_crud = ENV["ALLOW_CRUD"] || false
