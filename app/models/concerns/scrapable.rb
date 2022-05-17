@@ -24,7 +24,7 @@ module Scrapable
 
     def build_auth_token
       domain = URI.parse(@settings.domain).host.downcase
-      token = "#{@settings.access_email}:#{@settings.access_token}@#{domain}"
+      token = "#{@settings.access_email}:#{@settings.access_token}@#{domain}".strip.gsub "\n", ""
       @access_token = Base64.encode64 token
     end
 
