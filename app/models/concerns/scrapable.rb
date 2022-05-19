@@ -34,7 +34,7 @@ module Scrapable
 
     def load_external_list
       response = @client.get "rest/api/content/#{@settings.page_content_id}"
-      body = JSON.parse(response.body).with_indifferent_access
+      body = (response.body.is_a?(Hash) ? response.body : JSON.parse(response.body)).with_indifferent_access
 
       @raw_page = body.dig :body, :storage, :value
       logger.warn "fetched content is empty" unless @raw_page
