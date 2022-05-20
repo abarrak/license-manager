@@ -4,6 +4,7 @@
 
 <%= render @license %>
 
+<% if crud_enabled? %>
 <div>
   <%= link_to "Edit 📝", edit_license_path(@license) %> |
   <%= link_to "Back ⮐", licenses_path %>
@@ -12,3 +13,4 @@
     <%= button_to "Destroy 🗑", @license, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
   </div>
 </div>
+<% end %>

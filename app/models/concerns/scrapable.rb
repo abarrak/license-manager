@@ -22,26 +22,19 @@ module Scrapable
       @settings ||= Rails.application.config.x.scraping
     end
 
-    def build_auth_token
-      domain = URI.parse(@settings.domain).host.downcase
-      token = "#{@settings.access_email}:#{@settings.access_token}@#{domain}"
-      @access_token = Base64.encode64 token
-    end
-
     def prepare_connection
-      build_auth_token
       @client = Faraday.new url: @settings[:domain] do |f|
         f.params = { expand: 'body.storage' }
         f.headers = { 'Content-Type' => 'application/json' }
         f.request :json
-        f.request :authorization, 'Basic', @access_token
+        f.request :authorization, 'Bearer', @settings.access_token.strip
         f.response :json
       end
     end
 
     def load_external_list
       response = @client.get "rest/api/content/#{@settings.page_content_id}"
-      body = JSON.parse(response.body).with_indifferent_access
+      body = (response.body.is_a?(Hash) ? response.body : JSON.parse(response.body)).with_indifferent_access
 
       @raw_page = body.dig :body, :storage, :value
       logger.warn "fetched content is empty" unless @raw_page
