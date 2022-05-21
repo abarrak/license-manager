@@ -1,5 +1,7 @@
 # License Manager
 
+![CI actions](https://github.com/abarrak/license-manager/actions/workflows/ci.yaml/badge.svg)
+
 This is a simple application to manage and monitor the license activation and details with alerts.
 
 ## Features
