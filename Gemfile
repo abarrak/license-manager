@@ -15,6 +15,7 @@ gem "redis", "~> 4.0"
 gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem "annotate"
+gem "nokogiri", ">= 1.13.6"
 gem "faraday"
 gem "net-http"
 gem "whenever"

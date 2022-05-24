@@ -275,6 +275,7 @@ DEPENDENCIES
   jbuilder
   minitest-reporters
   net-http
+  nokogiri (>= 1.13.6)
   prometheus-client
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
