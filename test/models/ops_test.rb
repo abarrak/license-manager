@@ -7,16 +7,6 @@ class OpTest < ActiveSupport::TestCase
     stub_requests
   end
 
-  test "ensure that #sync_now enqueue all necessary jobs" do
-    assert_performed_jobs 3 do
-      Ops.sync_now
-    end
-
-    assert_enqueued_jobs 3 do
-      Ops.sync_now
-    end
-  end
-
   test "#clear_all clean up all licenses and expiries" do
     assert License.count > 0
     assert LicenseExpiry.count > 0
