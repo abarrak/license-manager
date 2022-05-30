@@ -29,7 +29,7 @@ The main idea behind the solution is to fetch periodically list of managed asset
 Apply the following secret including the scrape details, then restart:
 
 ```bash
-$ kubectl create secret generic additional-scrape-configs --from-file=deploy/prometheus-additional.yaml -n sre-apps
+$ kubectl create secret generic additional-scrape-configs --from-file=deploy/prometheus-additional.yaml -n monitoring
 $ kubectl rollout restart deploy,sts -n monitoring
 ```
 
